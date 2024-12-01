@@ -3,52 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Landing Page</title>
+    <title>Creative Dynamic Web Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
+    <!-- Navbar -->
     <nav id="navbar">
-        <div class="logo">Responsive Landing Page</div>
+        <div class="logo">Creative Dynamics</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js"></div>
         <div class="hero-content">
-            <h1>Welcome to Our Website</h1>
-            <p>Your one-stop solution for amazing services</p>
-            <a href="#contact" class="hero-button">Get Started</a>
+            <h1><span class="dynamic-text"></span></h1>
+            <p>Explore a world of creativity and innovation</p>
+            <a href="#services" class="hero-button">Learn More</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <h2>About Us</h2>
-        <p>We are a company dedicated to providing top-notch services...</p>
+        <div class="about-tabs">
+            <button class="tab-button" onclick="showTab('mission')">Our Mission</button>
+            <button class="tab-button" onclick="showTab('team')">Our Team</button>
+            <button class="tab-button" onclick="showTab('history')">Our History</button>
+        </div>
+        <div id="mission" class="tab-content active">
+            <p>We aim to revolutionize how people connect with technology.</p>
+        </div>
+        <div id="team" class="tab-content">
+            <p>Meet the experts behind our innovation-driven solutions.</p>
+        </div>
+        <div id="history" class="tab-content">
+            <p>Started in 2020, we have been pushing the boundaries of creativity.</p>
+        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="section">
         <h2>Our Services</h2>
         <div class="service-cards">
-            <div class="card">Service 1</div>
-            <div class="card">Service 2</div>
-            <div class="card">Service 3</div>
+            <div class="card">
+                <div class="card-front">
+                    <h3>Web Development</h3>
+                </div>
+                <div class="card-back">
+                    <p>Responsive, high-performance web solutions tailored for your needs.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="card-back">
+                    <p>Visually compelling designs that tell your story effectively.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h3>Digital Marketing</h3>
+                </div>
+                <div class="card-back">
+                    <p>Strategic marketing campaigns to boost your brand’s reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-gallery">
+            <img src="project1.jpg" alt="Project 1" onclick="openModal('Project 1')">
+            <img src="project2.jpg" alt="Project 2" onclick="openModal('Project 2')">
+            <img src="project3.jpg" alt="Project 3" onclick="openModal('Project 3')">
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <p>Feel free to reach out for any inquiries...</p>
+        <div id="map"></div>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Creative Dynamics. All Rights Reserved.</p>
+        <p>Current Time: <span id="clock"></span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
