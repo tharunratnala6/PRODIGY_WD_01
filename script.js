@@ -1,21 +1,55 @@
-// JavaScript to handle scrolling effect on the navigation bar
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+        navbar.style.background = "rgba(0, 0, 0, 0.9)";
     } else {
-        navbar.classList.remove('scrolled');
+        navbar.style.background = "rgba(51, 51, 51, 0.8)";
     }
 });
 
-// JavaScript to handle hover effect on menu items
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('mouseover', () => {
-        link.style.transition = 'color 0.3s'; // Smooth hover transition
-        link.style.color = '#ff9800';
-    });
-    link.addEventListener('mouseout', () => {
-        link.style.color = 'white';
-    });
-});
+// Typing Effect
+const dynamicText = document.querySelector('.dynamic-text');
+const phrases = ["Welcome", "Explore Creativity", "Discover Innovation"];
+let phraseIndex = 0;
+let charIndex = 0;
+
+function typeEffect() {
+    if (charIndex < phrases[phraseIndex].length) {
+        dynamicText.textContent += phrases[phraseIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 150);
+    } else {
+        setTimeout(deleteEffect, 2000);
+    }
+}
+
+function deleteEffect() {
+    if (charIndex > 0) {
+        dynamicText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(deleteEffect, 100);
+    } else {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+    }
+}
+
+typeEffect();
+
+// About Tabs
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+}
+
+// Portfolio Modal
+function openModal(projectTitle) {
+    alert(`Viewing details of: ${projectTitle}`);
+}
+
+// Clock in Footer
+setInterval(() => {
+    const clock = document.getElementById('clock');
+    clock.textContent = new Date().toLocaleTimeString();
+}, 1000);
