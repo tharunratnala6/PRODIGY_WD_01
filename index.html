@@ -1,114 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Dynamic Web Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Travel Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div class="logo">Creative Dynamics</div>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <h1 class="logo">TRAVEL.io</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#explore">Explore</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div id="particles-js"></div>
-        <div class="hero-content">
-            <h1><span class="dynamic-text"></span></h1>
-            <p>Explore a world of creativity and innovation</p>
-            <a href="#services" class="hero-button">Learn More</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome To Travel</h2>
+      <h1>Explore The World</h1>
+      <p>Discover breathtaking destinations around the globe.</p>
+      <a href="#explore" class="btn">Start Exploring</a>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <div class="about-tabs">
-            <button class="tab-button" onclick="showTab('mission')">Our Mission</button>
-            <button class="tab-button" onclick="showTab('team')">Our Team</button>
-            <button class="tab-button" onclick="showTab('history')">Our History</button>
-        </div>
-        <div id="mission" class="tab-content active">
-            <p>We aim to revolutionize how people connect with technology.</p>
-        </div>
-        <div id="team" class="tab-content">
-            <p>Meet the experts behind our innovation-driven solutions.</p>
-        </div>
-        <div id="history" class="tab-content">
-            <p>Started in 2020, we have been pushing the boundaries of creativity.</p>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        We aim to inspire you to travel to the most beautiful places on earth.
+      </p>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <div class="card-front">
-                    <h3>Web Development</h3>
-                </div>
-                <div class="card-back">
-                    <p>Responsive, high-performance web solutions tailored for your needs.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <h3>Graphic Design</h3>
-                </div>
-                <div class="card-back">
-                    <p>Visually compelling designs that tell your story effectively.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <h3>Digital Marketing</h3>
-                </div>
-                <div class="card-back">
-                    <p>Strategic marketing campaigns to boost your brand’s reach.</p>
-                </div>
-            </div>
+  <!-- Explore Section -->
+  <section class="explore" id="explore">
+    <div class="container">
+      <h2>Explore Destinations</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="C:\Users\tharu\OneDrive\Desktop\q1.webp" alt="Destination">
+          <h3>Tropical Beach</h3>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-gallery">
-            <img src="project1.jpg" alt="Project 1" onclick="openModal('Project 1')">
-            <img src="project2.jpg" alt="Project 2" onclick="openModal('Project 2')">
-            <img src="project3.jpg" alt="Project 3" onclick="openModal('Project 3')">
+        <div class="card">
+          <img src="C:\Users\tharu\OneDrive\Desktop\q2.webp" alt="Destination">
+          <h3>Mountain Escape</h3>
         </div>
-    </section>
+        <div class="card">
+          <img src="C:\Users\tharu\OneDrive\Desktop\q3.webp" alt="Destination">
+          <h3>City Lights</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <div id="map"></div>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; <span id="year"></span> Creative Dynamics. All Rights Reserved.</p>
-        <p>Current Time: <span id="clock"></span></p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
